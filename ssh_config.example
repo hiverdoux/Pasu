@@ -1,0 +1,15 @@
+# Pasu v2 키 하나를 특정 SSH 별칭에 연결하는 예시.
+# GUI의 폴더 버튼으로 현재 제작자의 key.pub를 찾아 그 경로를 사용한다.
+# IdentityFile은 Host 블록 사이에서 누적될 수 있으므로 각 사용 문맥의 실제
+# `ssh -G <별칭>` 출력도 확인한다.
+
+Host example-pasu
+    HostName example.test
+    User sample
+    IdentityAgent ~/.ssh/pasu/agent.sock
+    IdentityFile ~/.ssh/pasu/profiles/ABCDE12345.org.example.pasu/keys/00000000-0000-4000-8000-000000000000/key.pub
+    IdentitiesOnly yes
+    PubkeyAuthentication yes
+    ForwardAgent no
+    AddKeysToAgent no
+    UseKeychain no

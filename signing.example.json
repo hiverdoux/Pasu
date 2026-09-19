@@ -1,0 +1,6 @@
+{
+  "team_id": "ABCDE12345",
+  "bundle_id": "org.example.pasu",
+  "sign_identity": "Developer ID Application: Example Developer (ABCDE12345)",
+  "profile": "example.provisionprofile"
+}

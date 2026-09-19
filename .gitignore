@@ -1,0 +1,46 @@
+# macOS and local editor state
+.DS_Store
+/.claude/
+/.codex/
+/.idea/
+/.vscode/
+*.swp
+*~
+
+# Build and test output
+/pasu
+/PasuGUI
+/dist/
+/.build/
+/signing_identity_generated.go
+/signing.local.json
+/libpasuse.a
+/swift_build_stamp.go
+*.dSYM/
+*.test
+coverage.out
+*.coverprofile
+*.prof
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Credentials, signing material, and live configuration
+.env
+.env.*
+*.cer
+*.crt
+*.der
+*.key
+*.p12
+*.pem
+*.pfx
+*.provisionprofile
+*.mobileprovision
+*.pub
+/approvals.conf
+/conf.hmac
+/pasu.conf
+/*.sock

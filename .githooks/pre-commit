@@ -1,0 +1,8 @@
+#!/bin/zsh
+set -euo pipefail
+ROOT=$(git rev-parse --show-toplevel)
+WORK=$(mktemp -d "${TMPDIR:-/tmp}/pasu-precommit.XXXXXX")
+trap 'rm -rf "$WORK"' EXIT
+TREE=$(git write-tree)
+git -C "$ROOT" archive "$TREE" | tar -x -C "$WORK"
+"$WORK/scripts/check.sh"
